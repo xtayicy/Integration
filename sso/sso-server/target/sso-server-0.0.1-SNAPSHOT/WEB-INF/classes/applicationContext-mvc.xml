@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	       http://www.springframework.org/schema/beans/spring-beans.xsd
+	       http://www.springframework.org/schema/mvc
+    	   http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	       http://www.springframework.org/schema/context
+		   http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:component-scan base-package="harry" />
+	
+	<!-- 自定义Json解析器 -->
+	<mvc:annotation-driven>
+		<mvc:argument-resolvers>
+			<bean class="harry.resolvers.MethodArgumentResovler"/>
+		</mvc:argument-resolvers>
+		<mvc:message-converters>
+			<bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!-- 默认跳转管理员首页，因为没有权限会跳转至登录页 -->
+	<mvc:view-controller path="/" view-name="redirect:admin/admin" />
+
+	<!-- 视图解析器 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- 处理静态资源 方法一 属于同步请求 *本人更偏向这种 -->
+	<!-- ResourceHttpRequestHandler -->
+	<mvc:resources location="/static/images/" mapping="/static/images/**" />
+	<mvc:resources location="/static/css/" mapping="/static/css/**" />
+	<mvc:resources location="/static/js/" mapping="/static/js/**" />
+	<mvc:resources location="/static/fonts/" mapping="/static/fonts/**" />
+
+	<!-- 单点登录拦截器 -->
+	<mvc:interceptors>
+		<!-- SSO拦截 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/admin/**" />
+			<bean class="harry.interceptors.SSOInterceptor" />
+		</mvc:interceptor>
+		<!-- 权限拦截 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/admin/**" />
+			<bean class="harry.interceptors.PermissionInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+	<!-- RequestMappingHandlerMapping -->
+	<mvc:annotation-driven />
+</beans>

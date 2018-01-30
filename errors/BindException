@@ -1,0 +1,8 @@
+BindingException("Invalid bound statement (not found): " + statementName)
+
+错误原因
+1.接口类与mybatis配置文件没有绑定好
+
+解决办法
+1.检查接口的全限定名区namespace值相等
+2.select元素节点下的id有没有和接口方法名一致，参数、返回类型有没有一致
