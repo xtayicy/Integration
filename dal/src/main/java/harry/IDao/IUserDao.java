@@ -6,6 +6,7 @@ import harry.domain.User;
 /**
  * 
  * @author harry
+ *
  */
 public interface IUserDao extends IBaseDao<User>{
 	int deleteByPrimaryKey(String username);

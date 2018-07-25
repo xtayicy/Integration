@@ -2,6 +2,11 @@ package harry.exceptions;
 
 import harry.domain.ResultCode;
 
+/**
+ * 
+ * @author harry
+ *
+ */
 public class DaoException extends ApplicationException{
 	/**
 	 * 

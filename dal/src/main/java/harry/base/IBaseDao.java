@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 
  * @author harry
- * @param <T>
+ *
  */
 public interface IBaseDao<T extends IdEntity> {
 	

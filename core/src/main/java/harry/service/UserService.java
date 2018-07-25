@@ -11,7 +11,9 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 /**
+ * 
  * @author harry
+ *
  */
 @Service
 public class UserService extends BaseService<User> implements IUserService{

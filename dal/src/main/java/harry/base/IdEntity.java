@@ -4,11 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * base entity
  * 
  * @author harry
+ *
  */
-
 public class IdEntity implements Serializable{
 	/**
 	 * 

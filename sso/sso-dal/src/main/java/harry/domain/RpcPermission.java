@@ -1,7 +1,5 @@
 package harry.domain;
 
-import java.io.Serializable;
-
 /**
  * 
  * @author harry

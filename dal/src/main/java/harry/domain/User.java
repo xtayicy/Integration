@@ -5,6 +5,7 @@ import harry.base.IdEntity;
 /**
  * 
  * @author harry
+ *
  */
 public class User extends IdEntity{
 	/**

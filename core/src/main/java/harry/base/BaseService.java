@@ -5,8 +5,9 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
+ * 
  * @author harry
- * @param <T>
+ *
  */
 @Transactional
 public abstract class BaseService<T extends IdEntity> implements IBaseService<T> {
