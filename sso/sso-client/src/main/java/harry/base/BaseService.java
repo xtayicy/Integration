@@ -3,6 +3,13 @@ package harry.base;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * 
+ * @author harry
+ *
+ * @param <T>
+ * @param <ID>
+ */
 public interface BaseService<T,ID> {
 	public T get(ID pk);
 	

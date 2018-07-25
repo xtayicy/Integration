@@ -15,6 +15,11 @@ import harry.domain.Result;
 import harry.domain.SessionPermission;
 import harry.utils.ApplicationUtil;
 
+/**
+ * 
+ * @author harry
+ *
+ */
 @Controller
 @RequestMapping("/admin/admin")
 public class AdminController extends BaseController{

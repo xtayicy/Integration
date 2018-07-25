@@ -8,6 +8,11 @@ import harry.base.IBaseDao;
 import harry.domain.Pagination;
 import harry.domain.User;
 
+/**
+ * 
+ * @author harry
+ *
+ */
 public interface UserDao extends IBaseDao<User,Integer>{
 	public int enable(@Param("isEnable") Boolean isEnable, @Param("idList") List<Integer> idList);
 	

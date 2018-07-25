@@ -5,6 +5,11 @@ import java.util.List;
 import harry.base.BaseService;
 import harry.domain.UserApp;
 
+/**
+ * 
+ * @author harry
+ *
+ */
 public interface IUserAppService extends BaseService<UserApp, Integer>{
 	public void deleteByUserIds(List<Integer> idList);
 	
