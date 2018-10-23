@@ -42,4 +42,10 @@ public class UserRole extends PersistentObject{
 	public void setRoleId(Integer roleId) {
 		this.roleId = roleId;
 	}
+
+	@Override
+	public String toString() {
+		return "UserRole [appId=" + appId + ", userId=" + userId + ", roleId="
+				+ roleId + "]";
+	}
 }

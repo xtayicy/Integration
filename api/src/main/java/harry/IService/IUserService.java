@@ -8,9 +8,9 @@ import harry.domain.User;
  * @author harry
  */
 public interface IUserService extends IBaseService<User>{
-   void deleteByPrimaryKey(String username) throws RuntimeException;
+   public void deleteByPrimaryKey(String username) throws RuntimeException;
    
-   void testTransaction() throws RuntimeException;
+   public void testTransaction() throws RuntimeException;
    
-   User selectByPrimaryKey(String username);
+   public User selectByPrimaryKey(String username);
 }

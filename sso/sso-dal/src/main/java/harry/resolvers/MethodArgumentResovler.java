@@ -141,9 +141,7 @@ public class MethodArgumentResovler implements HandlerMethodArgumentResolver{
 	 * 参数的相关信息
 	 */
 	protected static class ParamInfo {
-
 		private String paramName;
-
 		private String name;
 
 		private Validator[] validators;

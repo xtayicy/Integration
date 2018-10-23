@@ -20,34 +20,44 @@ public class SessionUser implements Serializable {
 	private String account;
 	// 登录对象
 	private Object profile;
-	
+
 	public String getToken() {
 		return token;
 	}
+
 	public void setToken(String token) {
 		this.token = token;
 	}
+
 	public String getAccount() {
 		return account;
 	}
+
 	public void setAccount(String account) {
 		this.account = account;
 	}
+
 	public Object getProfile() {
 		return profile;
 	}
+
 	public void setProfile(Object profile) {
 		this.profile = profile;
 	}
-	
+
 	public SessionUser(String token, String userName, Object profile) {
 		this.token = token;
 		this.account = userName;
 		this.profile = profile;
 	}
-	
+
 	public SessionUser() {
 		super();
-		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "SessionUser [token=" + token + ", account=" + account
+				+ ", profile=" + profile + "]";
 	}
 }

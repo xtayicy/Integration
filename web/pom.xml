@@ -58,12 +58,6 @@
 			<artifactId>javax.servlet.jsp-api</artifactId>
 		</dependency>
 
-		<!-- mybatis -->
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-		</dependency>
-
 		<!-- spring-mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -86,14 +80,4 @@
 			<artifactId>ehcache-core</artifactId>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<finalName>web</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>

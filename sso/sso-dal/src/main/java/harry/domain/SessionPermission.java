@@ -44,4 +44,10 @@ public class SessionPermission implements Serializable {
 	public void setNoPermissions(String noPermissions) {
 		this.noPermissions = noPermissions;
 	}
+
+	@Override
+	public String toString() {
+		return "SessionPermission [menuList=" + menuList + ", permissionSet="
+				+ permissionSet + ", noPermissions=" + noPermissions + "]";
+	}
 }

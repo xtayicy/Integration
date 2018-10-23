@@ -8,9 +8,9 @@ import java.util.List;
  * @param <T>
  */
 public interface IBaseService<T> {
-	void insert(T entity) throws RuntimeException;
+	public void insert(T entity) throws RuntimeException;
 	
-	List<T> selectAll();
+	public List<T> selectAll();
 	
-	void update(T entity) throws RuntimeException;
+	public void update(T entity) throws RuntimeException;
 }

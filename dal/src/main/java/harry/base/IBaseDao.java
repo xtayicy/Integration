@@ -9,9 +9,9 @@ import java.util.List;
  */
 public interface IBaseDao<T extends IdEntity> {
 	
-	 void insert(T entity);
+	 public void insert(T entity);
 	 
-	 List<T> selectAll();
+	 public List<T> selectAll();
 	 
-	 void updateByPrimaryKey(T entity);
+	 public void updateByPrimaryKey(T entity);
 }

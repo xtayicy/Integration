@@ -5,7 +5,7 @@ package harry.domain;
  * @author harry
  *
  */
-public class ResultCode {
+public interface ResultCode {
 	public final static int SUCCESS = 1;// 成功
 
 	// 通用错误以9开头

@@ -18,22 +18,31 @@ public class RpcUser implements Serializable {
 	private String userName;
 	// 登录对象
 	private Object profile;
+
 	public String getUserName() {
 		return userName;
 	}
+
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 	public Object getProfile() {
 		return profile;
 	}
+
 	public void setProfile(Object profile) {
 		this.profile = profile;
 	}
-	
+
 	public RpcUser(String userName, Object profile) {
 		super();
 		this.userName = userName;
 		this.profile = profile;
+	}
+
+	@Override
+	public String toString() {
+		return "RpcUser [userName=" + userName + ", profile=" + profile + "]";
 	}
 }

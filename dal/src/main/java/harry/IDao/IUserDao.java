@@ -9,7 +9,7 @@ import harry.domain.User;
  *
  */
 public interface IUserDao extends IBaseDao<User>{
-	int deleteByPrimaryKey(String username);
+	public int deleteByPrimaryKey(String username);
 	
-	User selectByPrimaryKey(String username);
+	public User selectByPrimaryKey(String username);
 }
